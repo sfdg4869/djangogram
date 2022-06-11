@@ -1,0 +1,28 @@
+{% load static %}
+<header>
+    <div class="header-box">
+        <div class="main-img">
+            <a href="{% url 'posts:index' %}">
+                <img src="{% static 'images/posts/logo.png'%}" alt="logo">
+            </a>
+        </div>
+        <div class="search">
+            <form action="{% url 'posts:post_search' %}" method="GET">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" name="q" placeholder="Search">
+                
+            </form>
+        </div>
+        <div class="header-right">
+            <div>
+                <a href="{% url 'posts:post_create' %}">
+                <i class="fa fa-plus-circle fa-2x"></i>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'users:main' %}">Log out</a>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
